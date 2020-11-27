@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
 class ButtonWidget extends StatelessWidget {
+  Function _updateCounter;
+  ButtonWidget(this._updateCounter);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(50.0),
       child: FlatButton(
         color: Colors.blue[300],
-        onPressed: () {
-          print("Nothing happens when we press this button...");
-          print("...but we want that counter to be updated!!!");
-        },
+        onPressed: _updateCounter,
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Text(

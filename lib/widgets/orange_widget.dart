@@ -2,11 +2,15 @@ import 'package:flutter/material.dart';
 import 'red_widget.dart';
 
 class OrangeWidget extends StatelessWidget {
+  int _counterValue;
+
+  OrangeWidget(this._counterValue);
+
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.orange[200],
-      child: RedWidget(),
+      child: RedWidget(_counterValue),
     );
   }
 }
